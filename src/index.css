@@ -1,0 +1,196 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.Board {
+  border: 30px solid #382624;
+  border-radius: 5px;
+  position: relative;
+}
+
+.Game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.Game .warning {
+  height: 30px;
+}
+.Game .warning > * {
+  color: red;
+  font-size: 20px;
+  margin: 0;
+}
+
+.Home {
+  padding: 30px;
+}
+.Home > * {
+  margin: 20px;
+}
+.Home > p {
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+.Home button {
+  background-color: darkgreen;
+  color: white;
+  font-size: 20px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 5px 10px;
+}
+.Home button:disabled {
+  background-color: #eeeeee;
+  color: #cccccc;
+  cursor: not-allowed;
+}
+
+.Login {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  color: black;
+}
+.Login .form-wrapper {
+  width: 200px;
+  width: 500px;
+  padding: 10px;
+  background: rgb(226, 226, 226);
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.192);
+}
+.Login h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+.Login label {
+  font-size: 14px;
+  font-size: 1.6em;
+  margin: 10px 0;
+}
+.Login label:after {
+  content: ':';
+}
+.Login input {
+  box-sizing: border-box;
+  padding: 10px;
+  /* border: 1px solid black; */
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  font-size: 1.4em;
+  margin: 10px 0;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.Login button {
+  background-color: rgb(0, 47, 100);
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  margin: 20px 0;
+}
+.Login button:disabled {
+  background-color: #eeeeee;
+  color: #cccccc;
+  cursor: not-allowed;
+}
+.Login span {
+  color: royalblue;
+  cursor: pointer;
+}
+.Login .error {
+  color: red;
+}
+
+.Modal {
+  z-index: 20;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Modal .view-box {
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+.Modal .pieces {
+  display: flex;
+}
+.Modal .piece {
+  cursor: pointer;
+}
+.Modal .piece img {
+  width: 50px;
+}
+
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #15202b;
+  padding: 40px 60px;
+  padding-left: 90px;
+}
+.NavBar a {
+  color: #8b929b;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.3em;
+}
+
+.Piece {
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 500ms;
+  z-index: 10;
+}
+.Piece .chess-piece {
+  height: 50px;
+}
+
+.Square {
+  box-sizing: border-box;
+  color: white;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  transform-origin: center;
+}
+.Square.dark {
+  background-color: #7d574b;
+}
+.Square.light {
+  background-color: #fcd3a4;
+}
